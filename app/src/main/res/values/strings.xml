@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Apli</string>
+
+    <string name="txt_crear_tutor">Registrar tutor: </string>
+    <string name="txt_crear_alumno">Registrar alumno(requiere tutor): </string>
+    <string name="txt_observaciones_alumno">Observaciones: </string>
+    <string name="tv_alumnos">Listado de alumnos:</string>
+
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_apellido_1">1r apelllido</string>
+    <string name="txt_apellido_2">2o apelllido</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_telefono">Telefono</string>
+    <string name="txt_dni">DNI</string>
+    <string name="txt_tutor">Tutor</string>
+
+    <string name="btn_enviardatos">Enviar</string>
+    <string name="btn_crea_tutor">+Tutor</string>
+    <string name="btn_modificar_tutor">Modificar tutor</string>
+    <string name="btn_crea_alumno">+Alumno</string>
+    <string name="btn_modificar_alumno">Modificar alumno</string>
+    <string name="btn_pasar_lista">Listar alumnos</string>
+    <string name="btn_historial">Asistencias</string>
+    <string name="btn_ver_alumno">Ver alumno</string>
+    <string name="btn_ver_tutor">Ver tutor</string>
+    <string name="txt_modificar_tutor">Escoger el tutor a MODIFICAR:</string>
+    <string name="btn_modificar">Modificar datos</string>
+
+    <string name="btn_volver">Volver</string>
+
+
+</resources>
