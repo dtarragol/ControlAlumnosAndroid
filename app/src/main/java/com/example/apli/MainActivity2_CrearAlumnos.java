@@ -83,12 +83,16 @@ public class MainActivity2_CrearAlumnos extends AppCompatActivity {
         modificacion.put("dni", et_dni.getText().toString());
         modificacion.put("observaciones", et_observaciones.getText().toString());
         modificacion.put("idTutor", posicion_spinner+1);
+        modificacion.put("nula", 0);
+        modificacion.put("parcial", 0);
+        modificacion.put("total", 0);
         long newRowId = db.insert(TABLE_ALUMNOS,null, modificacion);
         if(newRowId==-1){
             Toast.makeText(this, "¡NO se ha guardado!", Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(this, "¡ALUMNO Guardado!", Toast.LENGTH_LONG).show();
         }
+
         db.close();
     }
 }

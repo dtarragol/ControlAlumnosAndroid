@@ -133,6 +133,7 @@
                 android:layout_gravity="left"
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
+                android:onClick="MenuListar"
                 android:text="@string/btn_pasar_lista" />
 
             <Space

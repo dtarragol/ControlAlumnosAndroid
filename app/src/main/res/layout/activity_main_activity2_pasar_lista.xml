@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_naranja"
+    tools:context=".MainActivity2_PasarLista">
+
+    <TextView
+        android:id="@+id/tv_alumnos"
+        android:layout_width="179dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="202dp"
+        android:text="@string/btn_pasar_lista"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="389dp"
+        android:layout_height="591dp"
+        android:layout_above="@+id/button12"
+        android:layout_below="@+id/textView_faltas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="13dp">
+
+        <LinearLayout
+            android:id="@+id/glay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView_faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_alumnos"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/txt_faltas"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#4FE62828"
+        android:onClick="btnVolver"
+        android:text="@string/btn_volver" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/button12"
+        android:backgroundTint="#E33737"
+        android:onClick="enviarDatosAsistencias"
+        android:text="@string/btn_enviardatos" />
+
+</RelativeLayout>

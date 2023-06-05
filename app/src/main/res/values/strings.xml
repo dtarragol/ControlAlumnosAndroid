@@ -13,6 +13,7 @@
     <string name="txt_telefono">Telefono</string>
     <string name="txt_dni">DNI</string>
     <string name="txt_tutor">Tutor</string>
+    <string name="txt_faltas">Falta a clase / Asistencia parcial / Asistencia</string>
 
     <string name="btn_enviardatos">Enviar</string>
     <string name="btn_crea_tutor">+Tutor</string>

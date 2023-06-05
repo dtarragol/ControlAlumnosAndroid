@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void MenuListar(View view){
         Toast.makeText(this, "Menu - Pasar lista diaria.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, MainActivity2_CrearTutores.class);
+        Intent intent = new Intent(this, MainActivity2_PasarLista.class);
         startActivity(intent);
         finish();
     }
@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         database.delete(TABLE_TUTORES, null, null);
         database.delete(TABLE_ALUMNOS, null, null);
+        //database.delete(TABLE_ASISTENCIAS, null, null);
         database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_TUTORES+"'");
         database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_ALUMNOS+"'");
+        //database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_ASISTENCIAS+"'");
         database.close();
         Toast.makeText(this,"DATOS ELIMINADOS", Toast.LENGTH_LONG).show();
 

@@ -11,7 +11,6 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
     public static final String TABLE_ALUMNOS = "t_alumnos";
     public static final String TABLE_TUTORES = "t_tutores";
 
-
     public AdminSQLiteOpenHelper(@Nullable Context context) {
         super(context, DATABASE_NOMBRE, null, DATABE_VERSION);
     }
@@ -25,7 +24,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
                 "apellido2 TEXT NOT NULL," +
                 "dni TEXT NOT NULL," +
                 "observaciones TEXT NOT NULL," +
-                "idTutor TEXT NOT NULL" +
+                "idTutor TEXT NOT NULL," +
+                "nula INTEGER NOT NULL," +
+                "parcial INTEGER NOT NULL," +
+                "total INTEGER NOT NULL" +
                 ")");
         db.execSQL("CREATE TABLE "+TABLE_TUTORES+" (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
