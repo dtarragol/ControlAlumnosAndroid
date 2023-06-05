@@ -122,4 +122,10 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
         Toast.makeText(this, "Se han actualizado los datos.", Toast.LENGTH_LONG).show();
         BD.close();
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -46,5 +46,10 @@ public class MainActivity2_CrearTutores extends AppCompatActivity {
             Toast.makeText(this, "¡TUTOR Guardado!", Toast.LENGTH_LONG).show();
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

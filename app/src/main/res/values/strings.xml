@@ -34,5 +34,9 @@
 
     <string name="btn_volver">Volver</string>
 
+    <string name="pop_title">Control de asistencia</string>
+    <string name="pop_desc">Aplicación para llevar un control de las asistencias de los alumnos de un aula.
+        También registra los contactos de los tutores legales de cada uno.</string>
+
 
 </resources>

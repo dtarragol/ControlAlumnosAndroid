@@ -115,4 +115,10 @@ public class MainActivity2_ModificarTutor extends AppCompatActivity {
             Toast.makeText(this, "¡TUTOR Modificado!", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

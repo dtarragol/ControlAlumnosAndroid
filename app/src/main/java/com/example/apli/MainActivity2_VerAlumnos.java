@@ -76,7 +76,6 @@ public class MainActivity2_VerAlumnos extends AppCompatActivity {
                     String c = "SELECT * FROM "+ TABLE_ALUMNOS+ " Where id="+(position+1);
                     Cursor con = BaseDeDatos.rawQuery(c, null);
                     if(con.moveToFirst()) {
-                        List<String> opciones = new ArrayList<>();
                         do {
                             String ID = con.getString(0);
                             String nom = con.getString(1);
@@ -161,5 +160,11 @@ public class MainActivity2_VerAlumnos extends AppCompatActivity {
             BD.close();
         }
         return resultado;
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

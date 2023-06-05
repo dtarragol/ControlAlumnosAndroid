@@ -5,19 +5,32 @@ import static com.example.apli.AdminSQLiteOpenHelper.TABLE_TUTORES;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    Dialog mDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //popup con explicacion de la app
+        mDialog = new Dialog(this);
+        mDialog.setContentView(R.layout.popup_inicio);
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mDialog.show();
+
     }
     public void MenuCrearTutor(View view){
         Toast.makeText(this, "Menu - Inscribir tutor.", Toast.LENGTH_SHORT).show();
@@ -62,17 +75,52 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
     public void BorrarDatos(View view){
-        AdminSQLiteOpenHelper dbHelper = new AdminSQLiteOpenHelper(this);
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        database.delete(TABLE_TUTORES, null, null);
-        database.delete(TABLE_ALUMNOS, null, null);
-        //database.delete(TABLE_ASISTENCIAS, null, null);
-        database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_TUTORES+"'");
-        database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_ALUMNOS+"'");
-        //database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_ASISTENCIAS+"'");
-        database.close();
-        Toast.makeText(this,"DATOS ELIMINADOS", Toast.LENGTH_LONG).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Está seguro de que desea eliminar todos los datos?\n" +
+                        "Eliminara Historial, Alumnos y tutores.")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AdminSQLiteOpenHelper dbHelper = new AdminSQLiteOpenHelper(MainActivity.this);
+                        SQLiteDatabase database = dbHelper.getWritableDatabase();
+                        database.delete(TABLE_TUTORES, null, null);
+                        database.delete(TABLE_ALUMNOS, null, null);
+                        database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_TUTORES+"'");
+                        database.execSQL("DELETE FROM SQLITE_SEQUENCE WHERE NAME = '"+TABLE_ALUMNOS+"'");
+                        database.close();
+                        Toast.makeText(MainActivity.this,"DATOS ELIMINADOS", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss(); // Cerrar el diálogo
+                    }
+                });
 
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Está seguro de que desea salir de la aplicación?")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Acciones a realizar al presionar "Aceptar" (por ejemplo, cerrar la aplicación)
+                        finish(); // Cerrar la actividad actual
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Acciones a realizar al presionar "Cancelar" (por ejemplo, mantener la actividad abierta)
+                        dialog.dismiss(); // Cerrar el diálogo
+                    }
+                });
 
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }
