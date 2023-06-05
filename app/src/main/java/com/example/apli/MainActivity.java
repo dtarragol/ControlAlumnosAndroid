@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void MenuHistorial(View view){
         Toast.makeText(this, "Menu - Ver historial asistencias.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, MainActivity2_CrearTutores.class);
+        Intent intent = new Intent(this, MainActivity2_HistorialAsistencias.class);
         startActivity(intent);
         finish();
     }

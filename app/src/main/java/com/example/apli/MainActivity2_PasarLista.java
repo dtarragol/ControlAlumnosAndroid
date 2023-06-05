@@ -26,9 +26,6 @@ import java.util.List;
 public class MainActivity2_PasarLista extends AppCompatActivity {
 
     LinearLayout lista;
-    CheckBox checkBox1;
-    CheckBox checkBox2;
-    CheckBox checkBox3;
     RadioGroup RG;
     int numeroAlumno=1;
     List<Integer> IDS = new ArrayList<>();
@@ -43,7 +40,6 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
         String c = "SELECT * FROM "+ TABLE_ALUMNOS;
         Cursor consulta = BD.rawQuery(c, null);
 
-        int h=0;
         if(consulta.moveToFirst()) {
             do {
                 String temp_id = consulta.getString(0);
@@ -90,7 +86,6 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
 
                 lista.addView(rowLayout);
                 numeroAlumno++;
-                h++;
             } while (consulta.moveToNext());
         }
         BD.close();
@@ -111,28 +106,16 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
                 RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
                 String selectedOption = selectedRadioButton.getText().toString();
                 if(selectedOption.equals("Nula")){
-                    //Toast.makeText(this, "Opcion1 seleccionada con alumno "+i, Toast.LENGTH_SHORT).show();
-                    ContentValues modificacion = new ContentValues();
-                    modificacion.put("nula", "nula +1");
-                    String whereClause = "id = ?";
-                    String[] whereArgs = {String.valueOf(i)};
-                    BD.update(TABLE_ALUMNOS,modificacion, whereClause, whereArgs);
+                    String updateQuery = "UPDATE "+TABLE_ALUMNOS+" SET nula = nula + ? WHERE id = "+i;
+                    BD.execSQL(updateQuery, new Object[]{1});
                 }
                 if(selectedOption.equals("Parcial")){
-                    //Toast.makeText(this, "Opcion2 seleccionada con alumno "+i, Toast.LENGTH_SHORT).show();
-                    ContentValues modificacion = new ContentValues();
-                    modificacion.put("parcial", "parcial +1");
-                    String whereClause = "id = ?";
-                    String[] whereArgs = {String.valueOf(i)};
-                    BD.update(TABLE_ALUMNOS,modificacion, whereClause, whereArgs);
+                    String updateQuery = "UPDATE "+TABLE_ALUMNOS+" SET parcial = parcial + ? WHERE id = "+i;
+                    BD.execSQL(updateQuery, new Object[]{1});
                 }
                 if(selectedOption.equals("Total")){
-                    //Toast.makeText(this, "Opcion3 seleccionada con alumno "+i, Toast.LENGTH_SHORT).show();
-                    ContentValues modificacion = new ContentValues();
-                    modificacion.put("total", "total +1");
-                    String whereClause = "id = ?";
-                    String[] whereArgs = {String.valueOf(i)};
-                    BD.update(TABLE_ALUMNOS,modificacion, whereClause, whereArgs);
+                    String updateQuery = "UPDATE "+TABLE_ALUMNOS+" SET total = total + ? WHERE id = "+i;
+                    BD.execSQL(updateQuery, new Object[]{1});
                 }
             }
         }
