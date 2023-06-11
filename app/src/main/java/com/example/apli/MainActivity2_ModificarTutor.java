@@ -33,8 +33,11 @@ public class MainActivity2_ModificarTutor extends AppCompatActivity {
         et_apellido2_tutor = (EditText) findViewById(R.id.et_apellido2_tutor);
         et_email_tutor = (EditText) findViewById(R.id.et_email_tutor);
         et_telefono_tutor = (EditText) findViewById(R.id.et_telefono_tutor);
-
         sp_tutores = (Spinner) findViewById(R.id.spinner_tutor_modificar);
+        inicializar();
+
+    }
+    public void inicializar(){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this);
         SQLiteDatabase BD = admin.getReadableDatabase();
         String c = "SELECT * FROM "+ TABLE_TUTORES;
@@ -81,7 +84,7 @@ public class MainActivity2_ModificarTutor extends AppCompatActivity {
                             et_telefono_tutor.setText(temp_telefono);
                         }
                         i++;
-                    } while (consulta.moveToNext());
+                    } while (consult.moveToNext());
                     bd.close();
                 }
             }
@@ -90,7 +93,6 @@ public class MainActivity2_ModificarTutor extends AppCompatActivity {
                 // Este método se llama cuando no se selecciona ningún elemento en el Spinner
             }
         });
-
     }
     public void btnVolver(View view){
         Intent intent = new Intent(this, MainActivity.class);

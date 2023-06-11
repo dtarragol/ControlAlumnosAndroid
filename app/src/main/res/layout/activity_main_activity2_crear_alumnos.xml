@@ -40,7 +40,8 @@
             android:background="@android:drawable/screen_background_light"
             android:ems="10"
             android:hint="@string/txt_nombre"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -54,7 +55,8 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/txt_apellido_1"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -67,7 +69,8 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/txt_apellido_2"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -81,7 +84,8 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/txt_dni"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -118,7 +122,8 @@
             android:background="@color/white"
             android:ems="10"
             android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"

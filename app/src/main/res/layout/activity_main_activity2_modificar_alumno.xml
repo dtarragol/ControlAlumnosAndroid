@@ -84,6 +84,7 @@
             android:layout_height="261dp"
             android:background="@color/white"
             android:ems="10"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </LinearLayout>
