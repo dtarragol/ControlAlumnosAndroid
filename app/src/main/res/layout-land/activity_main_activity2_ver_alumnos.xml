@@ -18,6 +18,7 @@
         android:layout_marginTop="19dp"
         android:layout_marginEnd="223dp"
         android:text="@string/tv_alumnos"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <Spinner
@@ -43,7 +44,8 @@
         android:layout_marginBottom="7dp"
         android:layout_toEndOf="@+id/spinner_lista_alumnos"
         android:backgroundTint="#E33737"
-        android:text="@string/btn_ver_tutor" />
+        android:text="@string/btn_ver_tutor"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button11"
@@ -58,7 +60,8 @@
         android:layout_toEndOf="@+id/spinner_lista_alumnos"
         android:backgroundTint="#4FE62828"
         android:onClick="btnVolver"
-        android:text="@string/btn_volver" />
+        android:text="@string/btn_volver"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/LayoutIz"
@@ -78,6 +81,7 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:text="TextView"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <Space
@@ -90,6 +94,7 @@
             android:layout_height="166dp"
             android:background="@color/white"
             android:ems="10"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -114,6 +119,7 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:text="TextView"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <Space
@@ -126,6 +132,7 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:text="TextView"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <Space
@@ -138,6 +145,7 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:text="TextView"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <Space
@@ -150,6 +158,7 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:text="TextView"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 

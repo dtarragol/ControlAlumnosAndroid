@@ -8,6 +8,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,6 +55,7 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
                 rowLayout.setOrientation(LinearLayout.HORIZONTAL);
                 TextView tv = new TextView(this);
                 tv.setText(A);
+                tv.setTextColor(Color.BLACK);
                 LinearLayout.LayoutParams textViewParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -73,10 +75,13 @@ public class MainActivity2_PasarLista extends AppCompatActivity {
 
                 RadioButton radioButton1 = new RadioButton(this);
                 radioButton1.setText("Nula");
+                radioButton1.setTextColor(Color.BLACK);
                 RadioButton radioButton2 = new RadioButton(this);
                 radioButton2.setText("Parcial");
+                radioButton2.setTextColor(Color.BLACK);
                 RadioButton radioButton3 = new RadioButton(this);
                 radioButton3.setText("Total");
+                radioButton3.setTextColor(Color.BLACK);
                 RG.addView(radioButton1);
                 RG.addView(radioButton2);
                 RG.addView(radioButton3);

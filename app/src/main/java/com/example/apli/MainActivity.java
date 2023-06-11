@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -20,18 +21,38 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Dialog mDialog;
+    private boolean mostrarBanner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        mostrarBanner = sharedPreferences.getBoolean("mostrarBanner", true);
 
-        //popup con explicacion de la app
-        mDialog = new Dialog(this);
-        mDialog.setContentView(R.layout.popup_inicio);
-        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        mDialog.show();
+
 
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (mostrarBanner) {
+            //popup con explicacion de la app
+            mDialog = new Dialog(this);
+            mDialog.setContentView(R.layout.popup_inicio);
+            mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            mDialog.show();
+            // Cambiar el estado de mostrarBanner a false
+            mostrarBanner = false;
+
+            // Guardar el nuevo estado utilizando SharedPreferences
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("mostrarBanner", mostrarBanner);
+            editor.apply();
+        }
+    }
+
     public void MenuCrearTutor(View view){
         Toast.makeText(this, "Menu - Inscribir tutor.", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity2_CrearTutores.class);

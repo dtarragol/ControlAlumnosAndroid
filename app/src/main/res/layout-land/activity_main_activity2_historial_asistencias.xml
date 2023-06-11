@@ -18,6 +18,7 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="21dp"
         android:text="@string/historial_asistencias"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <ScrollView
@@ -49,6 +50,7 @@
         android:layout_marginBottom="6dp"
         android:backgroundTint="#4FE62828"
         android:onClick="btnVolver"
-        android:text="@string/btn_volver" />
+        android:text="@string/btn_volver"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

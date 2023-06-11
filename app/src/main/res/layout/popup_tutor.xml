@@ -17,22 +17,25 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Texto de prueba!"
-        android:textSize="24sp"
+        android:layout_below="@+id/personIV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:layout_below="@+id/personIV"/>
+        android:text="Texto de prueba!"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
     <TextView
         android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Texto de prueba!2"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
         android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="18dp"
         android:layout_marginRight="22dp"
-        android:layout_marginLeft="22dp"/>
+        android:text="Texto de prueba!2"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 </RelativeLayout>

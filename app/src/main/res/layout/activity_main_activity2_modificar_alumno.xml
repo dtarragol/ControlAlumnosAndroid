@@ -18,6 +18,7 @@
         android:layout_marginTop="51dp"
         android:layout_marginEnd="202dp"
         android:text="@string/tv_alumnos"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <Spinner
@@ -45,7 +46,8 @@
         android:layout_marginEnd="256dp"
         android:backgroundTint="#4FE62828"
         android:onClick="btnVolver"
-        android:text="@string/btn_volver" />
+        android:text="@string/btn_volver"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn_ver_tutor"
@@ -60,7 +62,8 @@
         android:layout_marginEnd="54dp"
         android:backgroundTint="#E33737"
         android:onClick="ModificarAlumno"
-        android:text="@string/btn_modificar" />
+        android:text="@string/btn_modificar"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"

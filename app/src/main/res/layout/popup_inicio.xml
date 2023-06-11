@@ -23,6 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="6dp"
         android:text="@string/pop_title"
+        android:textColor="@color/black"
         android:textSize="24sp" />
 
     <TextView
@@ -39,6 +40,7 @@
         android:layout_marginBottom="20dp"
         android:text="@string/pop_desc"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
 </RelativeLayout>

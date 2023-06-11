@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tv_menu_tutores_y_alumnos"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -42,7 +43,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuCrearTutor"
-                android:text="@string/btn_crea_tutor" />
+                android:text="@string/btn_crea_tutor"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button6"
@@ -52,7 +54,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuModificarTutor"
-                android:text="@string/btn_modificar_tutor" />
+                android:text="@string/btn_modificar_tutor"
+                android:textColor="@color/white" />
 
         </TableRow>
 
@@ -68,7 +71,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuCrearAlumno"
-                android:text="@string/btn_crea_alumno" />
+                android:text="@string/btn_crea_alumno"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button7"
@@ -78,7 +82,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuModificarAlumno"
-                android:text="@string/btn_modificar_alumno" />
+                android:text="@string/btn_modificar_alumno"
+                android:textColor="@color/white" />
 
         </TableRow>
 
@@ -94,7 +99,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuVerAlumno"
-                android:text="@string/btn_ver_alumno" />
+                android:text="@string/btn_ver_alumno"
+                android:textColor="@color/white" />
 
         </TableRow>
 
@@ -116,6 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tv_menu_lista"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -131,7 +138,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuListar"
-                android:text="@string/btn_pasar_lista" />
+                android:text="@string/btn_pasar_lista"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button8"
@@ -141,7 +149,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E33737"
                 android:onClick="MenuHistorial"
-                android:text="@string/btn_historial" />
+                android:text="@string/btn_historial"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -156,7 +165,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#4FE62828"
                 android:onClick="BorrarDatos"
-                android:text="@string/btn_borrar_datos" />
+                android:text="@string/btn_borrar_datos"
+                android:textColor="@color/white" />
         </TableRow>
     </TableLayout>
 

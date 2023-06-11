@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -44,6 +45,7 @@ public class MainActivity2_HistorialAsistencias extends AppCompatActivity {
                 rowLayout.setOrientation(LinearLayout.HORIZONTAL);
                 TextView tv = new TextView(this);
                 tv.setText(A);
+                tv.setTextColor(Color.BLACK);
                 LinearLayout.LayoutParams textViewParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
